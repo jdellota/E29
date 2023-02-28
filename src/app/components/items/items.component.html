@@ -1,0 +1,32 @@
+<table>
+    <tr>
+        <th colspan="4"><hr></th>
+        
+    </tr>
+    <tr class="header">
+        <th>Description</th>
+        <th class="data">Qty</th>
+        <th class="data">Unit price</th>
+        <th class="data">Total price</th>
+    </tr>
+
+        
+    <tr class="items" *ngFor="let item of items">
+        <td>{{item.description}}</td>
+        <td class="data">{{item.qty}}</td>
+        <td class="data">{{item.price}}</td>
+        <td class="data">{{totalPrice(item)}}</td>
+    </tr>
+    <tr>
+        <th colspan="4"><hr></th>
+        
+    </tr>
+    
+    <tr>
+        <th></th>
+        <th></th>
+        <th class="data">Total</th>
+        <th class="data">{{getTotal()}}{{total}}</th>
+    </tr>
+    
+</table>
